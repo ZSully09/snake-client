@@ -44,5 +44,4 @@ function sendMessage(key) {
 }
 
 // setupInput();
-module.exports = { connection };
 module.exports = { setupInput };
