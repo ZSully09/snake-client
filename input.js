@@ -6,6 +6,7 @@ function setupInput(conn) {
   const stdin = process.stdin;
   stdin.on("data", handleUserInput);
   stdin.on("data", movementInput);
+  stdin.on("data", sendMessage);
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
@@ -30,6 +31,15 @@ function movementInput(key) {
   }
   if (key === "s") {
     connection.write("Move: down");
+  }
+}
+
+function sendMessage(key) {
+  if (key === "n") {
+    connection.write("Say: HISS");
+  }
+  if (key === "m") {
+    connection.write("Say: SCHMOKE");
   }
 }
 
