@@ -16,6 +16,22 @@ const connect = function() {
     conn.write("Name: ZS9");
   });
 
+  // conn.on("connect", () => {
+  //   conn.write("Move: Up");
+  // });
+
+  // conn.on("connect", () => {
+  //   conn.write("Move: Down");
+  // });
+
+  // conn.on("connect", () => {
+  //   conn.write("Move: Left");
+  // });
+
+  // conn.on("connect", () => {
+  //   conn.write("Move: Right");
+  // });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("data", data => {
